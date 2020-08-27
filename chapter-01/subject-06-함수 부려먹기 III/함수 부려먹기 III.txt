@@ -1,0 +1,7 @@
+[ Exercise ]
+이전 챕터의 숫자형 연습 과제에서 직사각형의 넓이를 계산하는 코드를 작성했습니다.
+이제 직사각형의 넓이를 계산해주는 calculateRectangleArea 함수를 만들어보세요.
+calculateRectangleArea 함수는 파라미터로 width와 height를 받고, 직사각형의 넓이를 리턴해줍니다.
+
+[ Self Check ]
+Area1: 12, Area2: 40, Area3: 14
