@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="header">
+    <img class="header-logo" src="images/logo.png" width="165px" height="58px">
+</div>
+<div class="container">
+    <div class="menu">
+        <ul>
+            <li id="home" class="active" onclick="clickMenu('home')"><a href="#">Home</a></li>
+            <li id="seoul" onclick="clickMenu('seoul')"><a href="#">Seoul</a></li>
+            <li id="tokyo" onclick="clickMenu('tokyo')"><a href="#">Tokyo</a></li>
+            <li id="paris" onclick="clickMenu('paris')"><a href="#">Paris</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <img id="travelImg" src="images/home.png">
+    </div>
+    <script type="text/javascript">
+        function clickMenu(id) {
+            let el = document.getElementById(id);
+            let elSibling = el.parentElement.children;
+            let elTravelImg = document.getElementById('travelImg');
+
+            for (let i = 0; i < elSibling.length; i++) {
+                elSibling[i].removeAttribute('class');
+            }
+
+            el.setAttribute('class', 'active');
+            elTravelImg.setAttribute('src', `images/${ id }.png`)
+        }
+    </script>
+</div>
+</body>
+</html>

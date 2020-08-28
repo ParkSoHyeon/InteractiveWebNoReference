@@ -1,0 +1,41 @@
+* {
+    text-align: center;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.header-logo {
+    margin-top: 80px;
+}
+
+.menu {
+    margin: 60px 0;
+}
+
+.menu ul {
+    padding: 0;
+}
+
+.menu .active {
+    font-weight: bold;
+}
+
+.menu li {
+    list-style: none;
+    display: inline;
+    margin: 0 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    font-family: Helvetica;
+    font-size: 16px;
+    color: #58595B;
+}
+
+.content img {
+    width: 90%;
+}
