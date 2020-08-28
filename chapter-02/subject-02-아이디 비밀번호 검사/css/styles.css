@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #1BBC9B;
+}
+
+input, button {
+    border: none;
+    outline: 0;
+}
+
+input::placeholder {
+    color: #9B9B9B;
+}
+
+.login-form {
+    width: 300px;
+    background-color: #EEEFF1;
+    margin: 50px auto 0;
+    padding: 20px;
+}
+
+.login-form, .login-form > * {
+    border-radius: 5px;
+}
+
+.login-form .form-control {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.login-form .login-btn {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: #1BBC9B;
+    color: #FFF;
+}
+
+.forget-password {
+    text-align: center;
+}
+
+.forget-password a {
+    color: #9B9B9B;
+    font-size: 12px;
+}

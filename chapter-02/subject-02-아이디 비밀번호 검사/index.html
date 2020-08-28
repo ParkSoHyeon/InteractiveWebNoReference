@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인 페이지</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="container">
+    <div class="login-form">
+        <input id="id" class="form-control" type="text" name="id" placeholder="아이디">
+        <input id="password" class="form-control" type="password" name="password" placeholder="비밀번호">
+
+        <button id="submitBtn" class="login-btn" type="submit">로그인</button>
+
+        <div class="forget-password"><a href="#">비밀번호를 잊어버리셨나요?</a></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+let elId = document.getElementById('id');
+let elPassword = document.getElementById('password');
+
+elId.addEventListener('keyup', changeEventHandler);
+elPassword.addEventListener('keyup', changeEventHandler);
+
+changeEventHandler();
+
+function changeEventHandler() {
+    let submitBtn = document.getElementById('submitBtn');
+
+    if (elId.value === '' || elPassword.value === '') {
+        submitBtn.setAttribute('style', 'background-color: #9B9B9B');
+    }
+    else {
+        submitBtn.setAttribute('style', 'background-color: #1BBC9B');
+    }
+
+}
+</script>
+</body>
+</html>
