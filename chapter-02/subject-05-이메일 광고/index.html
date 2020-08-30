@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Consulting Market</title>
+    <meta charset="utf-8" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+<div class="wrapper hero-header">
+    <div id="navbar">
+        <div class="logo"><img src="images/logo.png"></div>
+        <div class="menu left">
+            <ul>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">PRODUCTS</a></li>
+            </ul>
+        </div>
+        <div class="menu right">
+            <ul>
+                <li><a href="#">LOGIN</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">HOME</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container info">
+        <div class="info-content">
+            <h1>더 많은 <b>정보와 이벤트</b> 등을<br>받아보고 싶으면 <b>이메일을 입력해주세요!</b></h1>
+            <div class="form-email">
+                <input id="email" class="form-control" name="email" placeholder="이메일">
+                <button class="form-btn">Send</button>
+            </div>
+        </div>
+        <div class="info-image"><img src="images/desk.png" width="400px"></div>
+    </div>
+
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script>
+        $('#email').on('keyup', function (e) {
+            let email = this.value;
+            let isRegx = (email.indexOf('@') !== -1) && email.indexOf('@') < email.indexOf('.');
+
+            if (isRegx) {
+                $(this.nextElementSibling).addClass('active')
+            }
+            else {
+                $(this.nextElementSibling).removeClass('active')
+            }
+        });
+    </script>
+</div>
+</body>
+</html>

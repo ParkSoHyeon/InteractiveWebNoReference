@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+input, button {
+    border: none;
+    outline: 0;
+}
+
+.wrapper {
+    height: 100vh;
+}
+
+.hero-header {
+    background-image: linear-gradient(-1deg, rgba(77,121,194,0.22) 0%, rgba(77,121,194,0.00) 100%);
+}
+
+#navbar {
+    padding: 0 20px;
+    height: 60px;
+    line-height: 60px;
+}
+
+#navbar .logo {
+    display: inline-block;
+    margin: 0 17px;
+}
+
+#navbar .logo img {
+    width: 230px;
+    vertical-align: middle;
+}
+
+#navbar .menu {
+    display: inline-block;
+    position: fixed;
+}
+
+#navbar .menu.right {
+    right: 0;
+    margin-right: 20px;
+}
+
+#navbar .menu li {
+    margin: 0 17px;
+}
+
+#navbar .menu a {
+    font-size: 16px;
+    color: #817C92;
+}
+
+#navbar .menu.left > ul, li {
+    float: left;
+}
+
+#navbar .menu.right > ul, li {
+    float: right;
+}
+
+.container {
+}
+
+.info {
+    height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-content {
+    width: 500px;
+}
+
+.info-content h1 {
+    font-weight: normal;
+    font-size: 24px;
+    color: #323966;
+    line-height: 45px;
+    margin-bottom: 20px;
+}
+
+.form-email .form-control {
+    width: 400px;
+    box-shadow: 3px 3px 8px 0 rgba(0,0,0,0.20);
+    padding: 18px 118px 18px 24px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.form-email .form-btn {
+    position: relative;
+    bottom: 1px;
+    right: 100px;
+    width: 88px;
+    background: #9E9E9E;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+    border-radius: 5px;
+    color: white;
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+.form-btn.active {
+    background: #4D79C2;
+}
+
