@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Couple Story</title>
+    <meta charset="utf-8" />
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+<div class="wrapper">
+    <div id="navbar">
+        <img class="logo" src="images/logo.png" width="157px">
+    </div>
+    <div class="container hero-header">
+        <div class="d-day-content">
+            <div class="result-content">
+                <h2>만난지&nbsp;<span id="result-cnt" class="result-cnt">00</span>일째</h2>
+            </div>
+            <div class="image-content">
+                <img src="images/female.png" width="148px">
+                <img src="images/dot.png" width="8px">
+                <img src="images/dot.png" width="8px">
+                <img src="images/heart.png" width="16px">
+                <img src="images/dot.png" width="8px">
+                <img src="images/dot.png" width="8px">
+                <img src="images/male.png" width="148px">
+            </div>
+            <div class="calendar-content">
+                <label for="start-date">시작일</label>
+                <input type="date" id="start-date" name="start-date">
+            </div>
+            <button id="submit-btn" type="submit" class="submit-btn">결과 보기</button>
+        </div>
+    </div>
+</div>
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script>
+$('#submit-btn').on('click', function () {
+    let startDate = $('#start-date').val();
+    let nowDate = new Date();
+
+    if (startDate === '') {
+        alert('시작 날짜를 입력해주세요!');
+    }
+    else {
+        startDate = new Date(startDate);
+
+        startDate =new Date(startDate.getFullYear(), startDate.getMonth()+1, startDate.getDate());
+        nowDate =new Date(nowDate.getFullYear(), nowDate.getMonth()+1, nowDate.getDate());
+
+        let diffCnt = startDate.getTime() - nowDate.getTime();
+        diffCnt = Math.ceil(diffCnt / (1000 * 3600 * 24));
+
+        if (diffCnt > -1) {
+            diffCnt++;
+        }
+        else {
+            diffCnt = Math.abs(diffCnt);
+            diffCnt++;
+        }
+
+        $('#result-cnt').text(diffCnt);
+    }
+});
+
+</script>
+</body>
+</html>
