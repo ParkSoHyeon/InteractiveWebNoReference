@@ -40,19 +40,7 @@
             src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>
-    <script>
-        $('#email').on('keyup', function (e) {
-            let email = this.value;
-            let isRegx = (email.indexOf('@') !== -1) && email.indexOf('@') < email.indexOf('.');
-
-            if (isRegx) {
-                $(this.nextElementSibling).addClass('active')
-            }
-            else {
-                $(this.nextElementSibling).removeClass('active')
-            }
-        });
-    </script>
+    <script src="js/script.js"></script>
 </div>
 </body>
 </html>
